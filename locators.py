@@ -20,7 +20,7 @@ driver.find_element(By.ID,"currentAddress").send_keys("2720 College Park Rd")
 
 driver.find_element(By.XPATH, "//label[@for ='gender-radio-1']").click()
 driver.find_element(By.XPATH, "//label[@for ='hobbies-checkbox-1']").click()
-driver.find_element(By.XPATH, "//button[@type= 'submit']").click()
+driver.find_element(By.XPATH, "//button[@type='submit']").click()
 message = driver.find_element(By.ID, "example-modal-sizes-title-lg").text
 print(message)
 #test
