@@ -10,12 +10,25 @@ driver.maximize_window()
 #ID, Xpath, CSSSelectory, Classname, name, linkText
 
 time.sleep (3)
-driver.find_element(By.XPATH, "//span[@class='mat-button-wrapper']").click()
+driver.find_element(By.XPATH,"//span[@class='mat-button-wrapper']").click()
 
-driver.find_element(By.ID,"mat-input-1").send_keys("bransen.daniels@gmail.com")
+driver.find_element(By.ID,"mat-input-1").send_keys("bransen.daniels+selen@gmail.com")
 time.sleep (3)
-driver.find_element(By.XPATH, "//span[@class='mat-button-focus-overlay']").click()
+driver.find_element(By.XPATH,"//span[normalize-space()='NEXT']").click()
+time.sleep (3)
+driver.find_element(By.ID,"mat-input-3").send_keys("Bransen")
+driver.find_element(By.ID,"mat-input-4").send_keys("Daniels")
+driver.find_element(By.ID,"mat-input-5").send_keys("SunnyDay2023!")
+driver.find_element(By.ID,"mat-input-6").send_keys("SunnyDay2023!")
+driver.find_element(By.ID,"mat-input-7").send_keys("7248144081")
+driver.find_element(By.ID,"mat-input-8").send_keys("2720 College Park Rd")
+driver.find_element(By.ID,"mat-input-9").send_keys("Pittsburgh")
+driver.find_element(By.ID,"mat-input-11").send_keys("PA")
+driver.find_element(By.ID,"mat-input-10").send_keys("15101")
 
+#//input[@id='mat-input-18']
+time.sleep(3)
+driver.find_element(By.XPATH,"//span[@class='mat-button-wrapper']").click()
 #driver.find_element(By.ID,"lastName").send_keys("Daniels")
 #driver.find_element(By.ID,"userEmail").send_keys("hello@gmail.com")
 #driver.find_element(By.ID,"userNumber").send_keys("4125555343")

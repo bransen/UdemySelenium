@@ -1,14 +1,12 @@
-
-
 ItemsInCart = 0
-#2 items will be added to cart
+# 2 items will be added to cart
 
-if ItemsInCart != 2:  #raise Exception("Products Cart count not matching")
+if ItemsInCart != 2:  # raise Exception("Products Cart count not matching")
     pass
 
-assert(ItemsInCart == 0)
+assert (ItemsInCart == 0)
 
-#try , catch
+# try , catch
 
 try:
     with open('test.txt', 'r') as reader:
@@ -16,7 +14,6 @@ try:
 
 except:
     print("Somehow I reached this block because there was failure in try block")
-
 
 try:
     with open('test.txt', 'r') as reader:
