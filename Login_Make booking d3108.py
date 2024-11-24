@@ -3,6 +3,7 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
 driver = webdriver.Chrome()
 
 driver.get("https://bwd3108.cps.golf")
@@ -12,27 +13,35 @@ driver.maximize_window()
 time.sleep (3)
 driver.find_element(By.XPATH,"//span[@class='mat-button-wrapper']").click()
 
-driver.find_element(By.ID,"mat-input-1").send_keys("bransen.daniels+selen3@gmail.com")
+driver.find_element(By.ID,"mat-input-1").send_keys("bransen.daniels@gmail.com")
 time.sleep (3)
 driver.find_element(By.XPATH,"//span[normalize-space()='NEXT']").click()
 time.sleep (3)
-driver.find_element(By.ID,"mat-input-3").send_keys("Bransen3")
-driver.find_element(By.ID,"mat-input-4").send_keys("Daniels3")
-driver.find_element(By.ID,"mat-input-5").send_keys("SunnyDay2023!")
-driver.find_element(By.ID,"mat-input-6").send_keys("SunnyDay2023!")
-driver.find_element(By.ID,"mat-input-7").send_keys("7248144081")
-driver.find_element(By.ID,"mat-input-8").send_keys("2720 College Park Rd")
-driver.find_element(By.ID,"mat-input-9").send_keys("Pittsburgh")
-driver.find_element(By.ID,"mat-input-11").send_keys("PA")
-driver.find_element(By.ID,"mat-input-10").send_keys("15101")
+
+driver.find_element(By.ID,"mat-input-2").send_keys("SunnyDay2023!")
+driver.find_element(By.XPATH,"//span[normalize-space()='SIGN IN']").click()
+time.sleep (1)
+#driver.find_element(By.XPATH, "//span[@class='day-background-upper is-selected is-in-range range-start range-end is-visible']").click()
+
+#Static DropDown
+dropdown= Select(driver.find_element(By.XPATH, "//div[@id='mat-select-value-3']"))
+dropdown.select_by_index(1)
+#driver.find_element(By.ID,"mat-input-4").send_keys("Daniels3")
+#driver.find_element(By.ID,"mat-input-5").send_keys("SunnyDay2023!")
+#driver.find_element(By.ID,"mat-input-6").send_keys("SunnyDay2023!")
+#driver.find_element(By.ID,"mat-input-7").send_keys("7248144081")
+#driver.find_element(By.ID,"mat-input-8").send_keys("2720 College Park Rd")
+#driver.find_element(By.ID,"mat-input-9").send_keys("Pittsburgh")
+#driver.find_element(By.ID,"mat-input-11").send_keys("PA")
+#driver.find_element(By.ID,"mat-input-10").send_keys("15101")
 
 #//input[@id='mat-input-18']`
 time.sleep(3)
-driver.find_element(By.XPATH,"//span[normalize-space()='Create Account']").click()
+#driver.find_element(By.XPATH,"//span[normalize-space()='Create Account']").click()
 
 time.sleep(5)
 
-driver.find_element(By.XPATH,"(//span[contains(text(),'Add Card On File')])[1]").click()
+#driver.find_element(By.XPATH,"(//span[contains(text(),'Add Card On File')])[1]").click()
 #driver.find_element(By.ID,"lastName").send_keys("Daniels")
 #driver.find_element(By.ID,"userEmail").send_keys("hello@gmail.com")
 #driver.find_element(By.ID,"userNumber").send_keys("4125555343")
