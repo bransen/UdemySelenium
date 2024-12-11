@@ -4,13 +4,15 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
-driver = webdriver.Chrome()
+from selenium.webdriver.support.wait import WebDriverWait
 
+driver = webdriver.Chrome()
+driver.implicitly_wait(10)
 driver.get("https://bwd3108.cps.golf")
 driver.maximize_window()
 #ID, Xpath, CSSSelectory, Classname, name, linkText
 
-time.sleep (3)
+time.sleep (5)
 driver.find_element(By.XPATH,"//span[@class='mat-button-wrapper']").click()
 
 driver.find_element(By.ID,"mat-input-1").send_keys("bransen.daniels@gmail.com")
@@ -24,8 +26,9 @@ time.sleep (1)
 #driver.find_element(By.XPATH, "//span[@class='day-background-upper is-selected is-in-range range-start range-end is-visible']").click()
 
 #Static DropDown
-dropdown= Select(driver.find_element(By.XPATH, "//div[@id='mat-select-value-3']"))
+dropdown = Select(driver.find_element(By.XPATH,"//div[@class='cdk-overlay-container'][1]"))
 dropdown.select_by_index(1)
+#<div class="cdk-overlay-container" xpath="1"></div>
 #driver.find_element(By.ID,"mat-input-4").send_keys("Daniels3")
 #driver.find_element(By.ID,"mat-input-5").send_keys("SunnyDay2023!")
 #driver.find_element(By.ID,"mat-input-6").send_keys("SunnyDay2023!")
